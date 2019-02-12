@@ -12,14 +12,12 @@ public class TeamIterator implements Iterator {
 
 	@Override
 	public boolean hasNext() {
-		// TODO 6. cursor 와 team의 last 값을 활용하여 구현한다.
-		return false;
+		return cursor != team.size();
 	}
 	
 	@Override
 	public Object next() {
-		// TODO 7. team 객체를 순회하며 한 건식 Hero객체를 가져와 return한다.
-		return null;
+		return team.get(cursor++);
 	}
 	
 }

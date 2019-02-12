@@ -1,7 +1,9 @@
 package observer.youtube.case2;
 
-//TODO 1. java.util.Observer 를 implements 합니다.
-public class MarvelPan {
+import java.util.Observable;
+import java.util.Observer;
+
+public class MarvelPan implements Observer{
 	
 	private String name = "MarvelPan";
 	
@@ -9,7 +11,11 @@ public class MarvelPan {
 		System.out.print("Hi~ " + name + ". ");
 		System.out.println(publisher + " uploaded new contents '" + title + "'.");
 	}
-	
-	//TODO 2. update(Observable o, Object arg)를 Override 합니다.
-	
+
+	@Override
+	public void update(Observable o, Object arg) {
+		String title = (String)arg;
+		String publisher = ((MarvelEntertainment)o).getName();
+		update(publisher, title);
+	}
 }

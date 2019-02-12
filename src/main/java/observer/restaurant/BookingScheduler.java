@@ -2,21 +2,18 @@ package observer.restaurant;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 
-public class BookingScheduler {
+public class BookingScheduler extends Observable{
 	private int capacityPerHour;	
 	private List<Schedule> schedules;	
-	private SmsSender smsSender;
-	private MailSender mailSender;
 
 	public BookingScheduler(int capacityPerHour) {
 		this.schedules = new ArrayList<Schedule>();
 		this.capacityPerHour = capacityPerHour;
-		this.smsSender = new SmsSender();
-		this.mailSender = new MailSender();
 	}
 	
 	public void addSchedule(Schedule schedule) {
@@ -45,12 +42,8 @@ public class BookingScheduler {
 		
 		schedules.add(schedule);
 		
-		// send SMS to customer
-		smsSender.send(schedule);
-		// send E-mail to customer when e-mail is valid
-		if(schedule.getCustomer().getEmail() != null){
-			mailSender.sendMail(schedule);
-		}
+		setChanged();
+		notifyObservers(schedule);
 	}
 	
 	public DateTime getNow() {
