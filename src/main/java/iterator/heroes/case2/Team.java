@@ -24,6 +24,7 @@ public class Team extends AbstractCollection<Hero>{
 		return last;
 	}
 	
+	// TODO 4. AbstractCollection 에서 오라이드된 add 메소드를 구현한다.
 	@Override
 	public boolean add(Hero hero) {
 		return false;
