@@ -13,5 +13,9 @@ public class Main{
 			Hero hero = (Hero)it.next();
 			System.out.println(hero.getName());
 		}
+
+//		for (Hero hero : avengers) {
+//			System.out.println(hero.getName());
+//		}
 	}
 }
