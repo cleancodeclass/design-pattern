@@ -61,11 +61,15 @@
 	* Programming to an Interface, not an Implementation  
 		+ Clients remain unaware of the specific types of objects they use, as long as the objects adhere to the interface that clients expect.  
 		+ Clients remain unaware of the classes that implement these objects. Clients only know about the abstract class(es) defining the interface.  
-- 재사용을 실현 가능한 것으로  
+- 재사용 가능한 설계   
 	* Inheritance versus Composition  
 		+ Favor object composition over class inheritance.  
 	* Delegation  
-	* Inheritance versus Parameterized Types  
+	* Inheritance versus Parameterized Types    
+		+ composition을 사용하면 런타임에 동작을 변경할 수 있지만 간접 지정이 필요하고 비효율적 일 수 있다.  
+		+ inheritance을 사용하면 작업에 대한 기본 구현을 제공하고 하위 클래스에서 이를 재정의 할 수 있다.  
+		+ Parameterized Types을 사용하면 클래스에서 사용할 수 있는 type을 변경할 수 있다.  
+		※ 그러나 inheritance나 Parameterized Types은 런타임에 변경 될 수 없다.  
 - 런타임 및 컴파일 타임의 구조를 관계짓기  
 - 변화에 대비한 설계  
 
