@@ -78,4 +78,6 @@
 - 설계에서 가변성을 가져야 하는 부분이 무엇인지 파악한다.  
 
 ## 참고
-[DESIGN PATTERNS QUICK REFERENCE](http://www.mcdonaldland.info/2007/11/28/40/)
+- [Refactoring & Design Pattern](http://refactoring.guru/)  
+- [DESIGN PATTERNS QUICK REFERENCE](http://www.mcdonaldland.info/2007/11/28/40/)  
+
